@@ -10,7 +10,13 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
 fun myProfile() {
-
+    val firstName: String = "Lisa"
+    val lastName: String = "Ananda"
+    val age: Int = 21
+    val single: Boolean = true
+    println("Name: $firstName $lastName")
+    println("Age: $age")
+    println("Single: $single")
 }
 
 
@@ -19,6 +25,9 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
+    println("Group ID: $groupId")
+    println("Group Members: $groupMember")
+    println("Session: $session")
     return ""
 }
 
@@ -29,8 +38,8 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  *
  */
 fun myTeam(): List<Any> {
-
-    return listOf()
+    val groupMembers = listOf("Lisa Ananda", "Tiya Andini", "Refrizar Dwiardito", "Mila Kusmawati", "Adi Nugraha Kartiwa")
+    return groupMembers
 }
 
 /**
@@ -41,11 +50,12 @@ fun myTeam(): List<Any> {
  *
  */
 fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
+    val mentor = arrayOf<String>("Hasan Albana", "Yogi")
+    val countOfGroup = arrayOf<String>("Lisa", "Tiya", "Refrizar", "Mila", "Adi")
 
-    return 0
+    return mentor.size + countOfGroup.size
 }
+
 
 fun main() {
 
@@ -57,11 +67,13 @@ fun main() {
     val totalMember = totalMember()
     println("Total Member group : $totalMember")
 
-    /**
-     *  Latihan 5
-     *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
-     *
-     */
-    groupDetail("", listOf(), "")
+
+        /**
+         *  Latihan 5
+         *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
+         *
+         */
+    groupDetail("Webdroid", listOf("Lisa Ananda", "Tiya Andini", "Refrizar Dwiardito", "Mila Kusmawati", "Adi Nugraha Kartiwa"), "Morning")
+
 
 }
